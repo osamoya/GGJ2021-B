@@ -18,17 +18,17 @@ public class colorChange : MonoBehaviour
     {
         if (collision.gameObject.tag == "RSwitch")
         {
-            //gMScript.backColorR = true;
+            gMScript.backR = true;
         }
 
         if (collision.gameObject.tag == "GSwitch")
         {
-            //gMScript.backColorG = true;
+            gMScript.backG = true;
         }
 
         if (collision.gameObject.tag == "BSwitch")
         {
-            //gMScript.backColorB = true;
+            gMScript.backB = true;
         }
     }        
       
