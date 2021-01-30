@@ -12,11 +12,11 @@ public class wallCheck : MonoBehaviour
     [SerializeField]
     bool Green = false;//名前検討中
 
-    private Collider wall;
+    private Collider2D wall;
 
     void Start()
     {
-        
+        wall=this.GetComponent<Collider2D>();
     }
     void Update()
     {
