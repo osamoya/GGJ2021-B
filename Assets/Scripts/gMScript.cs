@@ -25,7 +25,7 @@ public class gMScript : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("gameResult："+gameResult);//デバッグ用
+        //Debug.Log("gameResult："+gameResult);//デバッグ用
 
         //----------------------------------------デバッグ用
         if (debugMode)
