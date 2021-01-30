@@ -25,10 +25,14 @@ public class gMScript : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("gameResult："+gameResult);//デバッグ用
+
+        //----------------------------------------デバッグ用
         if (debugMode)
         {
             backR = R;backG = G; backB = B;
         }
+        //----------------------------------------デバッグ終了
     }
 
 }

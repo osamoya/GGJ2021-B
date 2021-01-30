@@ -24,11 +24,11 @@ public class moverScript : MonoBehaviour
         rb.velocity = new Vector2(h * speed, v * speed);//動かすメインのスクリプト
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Goal")
         {
-            gMScript.gameResult = -1;
+            gMScript.gameResult = -1;Debug.Log("ゴール");
         }
     }
 }
