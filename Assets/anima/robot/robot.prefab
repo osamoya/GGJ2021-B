@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 7953885990376391454}
   - component: {fileID: 7953885990376391448}
   - component: {fileID: 7953885990376391455}
+  - component: {fileID: -2173369223326115966}
   m_Layer: 0
   m_Name: robot
   m_TagString: Untagged
@@ -460,6 +461,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+--- !u!70 &-2173369223326115966
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7953885990376391452}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.20315409, y: -0.07387698}
+  m_Size: {x: 8.072266, y: 11.711968}
+  m_Direction: 0
 --- !u!1 &7953885990406135383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 2.9214323
+  m_Length: 2.9214327
   m_ChildTransform: {fileID: 7953885990653566431}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &7953885991296396166
