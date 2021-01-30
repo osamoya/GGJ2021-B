@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - RSwitch
+  - Goal
+  - GSwitch
+  - BSwitch
   layers:
   - Default
   - TransparentFX
