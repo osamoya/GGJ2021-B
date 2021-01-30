@@ -11,6 +11,7 @@ public class resultController : MonoBehaviour
     [SerializeField] GameObject nextStageButton;
     [SerializeField] GameObject restartButton;
     [SerializeField] GameObject backTitleButton;
+    public int stageNumber = SceneManager.GetActiveScene().buildIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +25,8 @@ public class resultController : MonoBehaviour
         if (gMScript.gameResult == -1)
         {
             goalPanel.SetActive(true);//ゴールした際のパネル
-            if(Input.GetKeyDown("Space")) {
-                SceneManager.LoadScene("SampleScene");
+            if(Input.GetKeyDown("space")) {
+                SceneManager.LoadScene(stageNumber+1);
                 gMScript.gameResult = 0;
 
             }
@@ -42,7 +43,7 @@ public class resultController : MonoBehaviour
             }
             else if (Input.GetKeyDown("escape"))
             {
-                SceneManager.LoadScene("TitleScene");
+                SceneManager.LoadScene(1);
                 gMScript.gameResult = 0;
 
             }
@@ -55,7 +56,7 @@ public class resultController : MonoBehaviour
     {// 引数を Button 型に設定
         if (button == nextStageButton)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(stageNumber + 1);
             gMScript.gameResult = 0;
         }
         else if (button == restartButton)
@@ -65,7 +66,7 @@ public class resultController : MonoBehaviour
             gMScript.gameResult = 0;
         }
         else{
-           SceneManager.LoadScene("TitleScene");
+           SceneManager.LoadScene(1);
                 gMScript.gameResult = 0;
         }
     }
