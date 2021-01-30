@@ -4,13 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - RSwitch
   - Goal
-<<<<<<< HEAD
+  - RSwitch
   - GSwitch
   - BSwitch
-=======
->>>>>>> fcce690d885e46ee88edaf1329db5c96c68df77d
   layers:
   - Default
   - TransparentFX
