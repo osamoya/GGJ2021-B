@@ -9,6 +9,8 @@ TagManager:
   - RSwitch
   - Goal
   - enemyR
+  - enemyG
+  - enemyB
   layers:
   - Default
   - TransparentFX
