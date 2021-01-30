@@ -20,12 +20,12 @@ public class resultController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gMscript.gameResult = 1)
+        if (gMScript.gameResult == 1)
         {
             goalPanel.SetActive(true);//ゴールした際のパネル
            
         }
-        else if (gMscript.gameResult = -1)
+        else if (gMScript.gameResult == -1)
         {
             gameoverPanel.SetActive(true);//クリアした際のパネル
            
@@ -37,13 +37,13 @@ public class resultController : MonoBehaviour
         if (button == nextStageButton)
         {
             SceneManager.LoadScene("SampleScene");
-            gMscript.gameResult = 0;
+            gMScript.gameResult = 0;
         }
         else
         {
             Scene loadScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(loadScene.name);
-            gMscript.gameResult = 0;
+            gMScript.gameResult = 0;
         }
     }
 }
