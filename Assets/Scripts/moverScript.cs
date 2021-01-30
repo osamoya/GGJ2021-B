@@ -18,9 +18,17 @@ public class moverScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var h = Input.GetAxis("Horizontal");//縦向き
+        var h = Input.GetAxis("Horizontal");//縦向きの動きを
         var v = Input.GetAxis("Vertical");
         //animator.SetBool("walk", false);
-        rb.velocity = new Vector2(h * speed,v*speed);//動かすメインのスクリプト
+        rb.velocity = new Vector2(h * speed, v * speed);//動かすメインのスクリプト
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Goal")
+        {
+            gMScript.gameResult = -1;
+        }
     }
 }
