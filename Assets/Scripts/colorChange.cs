@@ -11,7 +11,7 @@ public class colorChange : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log("R:" + gMScript.backR + " G:" + gMScript.backG + " B:" + gMScript.backB);
+       // Debug.Log("R:" + gMScript.backR + " G:" + gMScript.backG + " B:" + gMScript.backB);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

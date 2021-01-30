@@ -12,13 +12,20 @@ public class enemyScript : MonoBehaviour
 
     void Start()
     {
-        if (this.tag == "razerR") Red = true;
-        if (this.tag == "razerG") Green = true;
-        if (this.tag == "razerB") Blue = true;
+        if (this.tag == "enemyR") Red = true;
+        if (this.tag == "enemyG") Green = true;
+        if (this.tag == "enemyB") Blue = true;
         raze = this.GetComponent<Collider2D>();
     }
 
     void Update()
+    {
+
+        
+       
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (gMScript.backR && !gMScript.backG && !gMScript.backB)//背景が赤
         {
@@ -28,42 +35,50 @@ public class enemyScript : MonoBehaviour
                 if (!Red && Blue && !Green) gMScript.gameResult = 1;//敵キャラが青の場合
 
             }*/
-            if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
-            {
-                if (!Red && Blue && !Green) gMScript.gameResult = 1;//敵キャラが青の場合
-            }
-            if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
-            {
-                if (!Red && !Blue && Green) gMScript.gameResult = 1;//敵キャラが緑の場合
-            }
+            /*if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
+            {*/
+            if (!Red && Blue && !Green) { gMScript.gameResult = 1; Debug.Log("死亡"); } //敵キャラが青の場合
+            //}
+            //if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
+            //{
+            if (!Red && !Blue && Green) { gMScript.gameResult = 1; Debug.Log("死亡"); }//敵キャラが緑の場合
+            //}
         }
         if (!gMScript.backR && gMScript.backG && !gMScript.backB)//背景が緑
         {
-            if (gMScript.plR && !gMScript.plG && !gMScript.plB)//自キャラが赤
+            // if (gMScript.plR && !gMScript.plG && !gMScript.plB)//自キャラが赤
+            // {
+            if (!Red && Blue && !Green)
             {
-                if (!Red && Blue && !Green) gMScript.gameResult = 1;//敵キャラが青の場合
+                gMScript.gameResult = 1;
+                Debug.Log("死亡");
+            }//敵キャラが青の場合
 
-            }
+            //  }
             /*if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
             {
                 if (Red && !Blue && !Green) gMScript.gameResult = 1;//敵キャラが赤の場合
                 if (!Red && Blue && !Green) gMScript.gameResult = 1;//敵キャラが青の場合
             }*/
-            if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
+            // if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
+            // {
+            if (Red && !Blue && !Green)
             {
-                if (Red && !Blue && !Green) gMScript.gameResult = 1;//敵キャラが赤の場合
-            }
+                gMScript.gameResult = 1;
+                Debug.Log("死亡");
+            }//敵キャラが赤の場合
+             // }
         }
         if (!gMScript.backR && !gMScript.backG && gMScript.backB)//背景が青
         {
-            if (gMScript.plR && !gMScript.plG && !gMScript.plB)//自キャラが赤
-            {
-                if (!Red && !Blue && Green) gMScript.gameResult = 1;//敵キャラが緑の場合
-            }
-            if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
-            {
-                if (Red && !Blue && !Green) gMScript.gameResult = 1;//敵キャラが赤の場合
-            }
+            //if (gMScript.plR && !gMScript.plG && !gMScript.plB)//自キャラが赤
+            //{
+            if (!Red && !Blue && Green) { gMScript.gameResult = 1; Debug.Log("死亡"); }//敵キャラが緑の場合
+                                                                                     //}
+                                                                                     //if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
+                                                                                     //{
+            if (Red && !Blue && !Green) { gMScript.gameResult = 1; Debug.Log("死亡"); }//敵キャラが赤の場合
+            //}
             /*if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
             {
                 if (Red && !Blue && !Green) gMScript.gameResult = 1;//敵キャラが赤の場合
@@ -72,3 +87,5 @@ public class enemyScript : MonoBehaviour
         }
     }
 }
+
+
