@@ -7,30 +7,30 @@ public class colorChange : MonoBehaviour
 
     void Start()
     {
-        
-    }    
+
+    }
     void Update()
     {
-        
+        //Debug.Log("R:" + gMScript.backR + " G:" + gMScript.backG + " B:" + gMScript.backB);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "RSwitch")
         {
-            gMScript.backR = true;
+            if (gMScript.backR) { gMScript.backR = false; } else { gMScript.backR = true; }
         }
 
         if (collision.gameObject.tag == "GSwitch")
         {
-            gMScript.backG = true;
+            if (gMScript.backG) { gMScript.backG = false; } else { gMScript.backG = true; }
         }
 
         if (collision.gameObject.tag == "BSwitch")
         {
-            gMScript.backB = true;
+            if (gMScript.backB) { gMScript.backB = false; } else { gMScript.backB = true; }
         }
-    }        
-      
     }
+
+}
 
