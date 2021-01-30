@@ -6,8 +6,11 @@ TagManager:
   tags:
   - RSwitch
   - Goal
+<<<<<<< HEAD
   - GSwitch
   - BSwitch
+=======
+>>>>>>> fcce690d885e46ee88edaf1329db5c96c68df77d
   layers:
   - Default
   - TransparentFX
