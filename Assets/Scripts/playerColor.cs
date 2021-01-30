@@ -20,17 +20,17 @@ public class playerColor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Rrazer")
         {
-            //if (gMScript.plR) { gMScript.plR = false; } else { gMScript.plR = true; }
+            if (gMScript.plR) { gMScript.plR = false; } else { gMScript.plR = true; }
         }
 
         if (collision.gameObject.tag == "Grazer")
         {
-            //if (gMScript.plG) { gMScript.plG = false; } else { gMScript.plG = true; }
+            if (gMScript.plG) { gMScript.plG = false; } else { gMScript.plG = true; }
         }
 
         if (collision.gameObject.tag == "Brazer")
         {
-            //if (gMScript.plB) { gMScript.plB = false; } else { gMScript.plB = true; }
+            if (gMScript.plB) { gMScript.plB = false; } else { gMScript.plB = true; }
         }
     }
 }
