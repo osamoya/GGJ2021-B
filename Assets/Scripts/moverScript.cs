@@ -23,8 +23,11 @@ public class moverScript : MonoBehaviour
         //Debug.Log(h);
         animator.SetBool("walk", false);
         rb.velocity = new Vector2(h * speed, v * speed);//動かすメインのスクリプト
-        if (Mathf.Abs(h + v) >= 0.01) {
+        if (Mathf.Abs(h + v) >= 0.01&& gMScript.gameResult == 0) {
             animator.SetBool("walk", true);
+        }
+        if (gMScript.gameResult == 1) {
+            animator.SetBool("destroy", true);
         }
     }
 
