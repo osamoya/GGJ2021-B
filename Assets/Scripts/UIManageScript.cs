@@ -11,10 +11,13 @@ using UnityEngine.SceneManagement;
 public class UIManageScript : MonoBehaviour
 {
     private bool OverScene;//現在上にシーンがかかっているかどうか
+    public AudioSource sound;
+    AudioSource audiosource;
     // Start is called before the first frame update
     void Start()
     {
         OverScene = false;
+        audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,18 +48,21 @@ public class UIManageScript : MonoBehaviour
         {
             gMScript.nowStageNum++;
             string sname = "Stage"+gMScript.nowStageNum;
-            LoadName(sname);
+            sound.PlayOneShot(sound.clip);
+            LoadName(sname);            
         }
         else
         {
             Debug.Log("タイトルへ");
             LoadName("TitleScene");
+            
         }
     }
 
     public void SelectMap()
     {
         LoadName("mapChoose");
+       
     }
 
     private void Reset()
