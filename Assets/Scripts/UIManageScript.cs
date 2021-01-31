@@ -39,6 +39,7 @@ public class UIManageScript : MonoBehaviour
     }
     public void NextStage()
     {
+        Reset();
         Debug.Log("ステージクリア後、呼ばれる");
         if (gMScript.nowStageNum <= 5)
         {
@@ -51,5 +52,13 @@ public class UIManageScript : MonoBehaviour
             Debug.Log("タイトルへ");
             LoadName("TitleScene");
         }
+    }
+
+    private void Reset()
+    {
+        gMScript.gameResult = 0;
+        gMScript.backR = false;
+        gMScript.backG = false;
+        gMScript.backB = false;
     }
 }
