@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gMScript : MonoBehaviour
 {
@@ -39,10 +40,17 @@ public class gMScript : MonoBehaviour
         }
         //----------------------------------------デバッグ終了
 
-        if (gameResult == -1)
+        if (gameResult == -1)//クリア
         {
             Debug.Log("シーン読み込み");
             UIM.LoadOver("StageClear");
+        }
+        if (gameResult==1)//ミス
+        {
+            Debug.Log("ミスの判定");
+            //ここに関数
+            gameResult = 0;
+            UIM.LoadName("stage"+nowStageNum);
         }
     }
 
