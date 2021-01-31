@@ -10,10 +10,15 @@ public class mapChoose : MonoBehaviour
     public int maxStageNum;
     public GameObject leftAr;
     public GameObject rightAr;
+    public AudioSource slide;
+    AudioSource audiosource;
+
     //gMScript.nowStageNum;
     // Start is called before the first frame update
     void Start()
     {
+        audiosource = GetComponent<AudioSource>();
+
         gMScript.gameResult = 0;
     }
 
@@ -26,15 +31,17 @@ public class mapChoose : MonoBehaviour
         if (chooseMap == maxStageNum) rightAr.SetActive(false);
         this.transform.position = new Vector2(allMapX+960, 560);
         if ((Input.GetKeyDown(KeyCode.D)||Input.GetKeyDown(KeyCode.RightArrow))&& chooseMap<maxStageNum) {//右
+            slide.PlayOneShot(slide.clip);
             allMapX -= 768;
             chooseMap++;
         }
         if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))&&chooseMap>1) {//左
+            slide.PlayOneShot(slide.clip);
             allMapX += 768;
             chooseMap--;
         }
         if (Input.GetKeyDown(KeyCode.Space)|| Input.GetKeyDown(KeyCode.Return))
-        {
+        {            
             SceneManager.LoadScene("Stage"+ chooseMap);
             gMScript.nowStageNum = chooseMap;
         }
@@ -43,6 +50,7 @@ public class mapChoose : MonoBehaviour
     public void left() {
         if (chooseMap > 1)
         {//左
+            slide.PlayOneShot(slide.clip);
             allMapX += 768;
             chooseMap--;
         }
@@ -51,6 +59,7 @@ public class mapChoose : MonoBehaviour
     {
         if (chooseMap < maxStageNum)
         {//右
+            slide.PlayOneShot(slide.clip);
             allMapX -= 768;
             chooseMap++;
         }
