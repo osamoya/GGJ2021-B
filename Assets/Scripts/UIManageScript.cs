@@ -49,8 +49,8 @@ public class UIManageScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("タイトルへ");
-            LoadName("TitleScene");
+            Debug.Log("クレジットへ");
+            LoadName("credit");
         }
     }
 
