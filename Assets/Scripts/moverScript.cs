@@ -21,6 +21,7 @@ public class moverScript : MonoBehaviour
         var h = Input.GetAxis("Horizontal");//縦向きの動きを
         var v = Input.GetAxis("Vertical");
         //Debug.Log(h);
+        animator.SetBool("destroy", false);
         animator.SetBool("walk", false);
         rb.velocity = new Vector2(h * speed, v * speed);//動かすメインのスクリプト
         if (Mathf.Abs(h + v) >= 0.01&& gMScript.gameResult == 0) {
