@@ -24,6 +24,8 @@ public class gMScript : MonoBehaviour
     private bool debugMode=false;//これをオンにして、デバッグスタート
     [SerializeField]
     private bool R, G, B;
+    [SerializeField]
+    private int stage;
 
     private void Update()
     {
@@ -33,6 +35,7 @@ public class gMScript : MonoBehaviour
         if (debugMode)
         {
             backR = R;backG = G; backB = B;
+            gMScript.nowStageNum = stage;
         }
         //----------------------------------------デバッグ終了
 
