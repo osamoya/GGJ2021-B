@@ -14,6 +14,7 @@ public class gMScript : MonoBehaviour
     public static bool plB;
     
     public static int gameResult;//ゲームの状況を取得する変数
+    public static int nowStageNum;//0…ステージ以外。1～…遊べるステージ
 
 
     //ここからくそコード
