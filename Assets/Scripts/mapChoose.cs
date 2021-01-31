@@ -45,7 +45,11 @@ public class mapChoose : MonoBehaviour
             SceneManager.LoadScene("Stage"+ chooseMap);
             gMScript.nowStageNum = chooseMap;
         }
-                
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            SceneManager.LoadScene("TitleScene");
+        }
+
     }
     public void left() {
         if (chooseMap > 1)
