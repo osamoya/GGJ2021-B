@@ -18,6 +18,8 @@ public class gMScript : MonoBehaviour
 
     [SerializeField] public static int nowStageNum;//0…ステージ以外。1～…遊べるステージ
 
+    [SerializeField] private float animeTime;//足されていくやつ
+
 
     //ここからくそコード
     //デバッグ用消してもよい
@@ -27,6 +29,11 @@ public class gMScript : MonoBehaviour
     private bool R, G, B;
     [SerializeField]
     private int stage;
+
+    private void Start()
+    {
+        animeTime = 0f;
+    }
 
     private void Update()
     {
@@ -47,10 +54,14 @@ public class gMScript : MonoBehaviour
         }
         if (gameResult==1)//ミス
         {
-            Debug.Log("ミスの判定");
-            //ここに関数
-            gameResult = 0;
-            UIM.LoadName("stage"+nowStageNum);
+            animeTime += Time.deltaTime;
+            if (animeTime>=2.0f)
+            {
+                Debug.Log("ミスの判定");
+                gameResult = 0;
+                UIM.LoadName("stage" + nowStageNum);
+            }
+            
         }
     }
 
