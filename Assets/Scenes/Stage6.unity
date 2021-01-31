@@ -321,7 +321,7 @@ PrefabInstance:
     - target: {fileID: 4477651783834304179, guid: df1be03182a8ec2428edb3f06a8b0ee1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.87988
+      value: 20.84
       objectReference: {fileID: 0}
     - target: {fileID: 4477651783834304179, guid: df1be03182a8ec2428edb3f06a8b0ee1,
         type: 3}
@@ -2239,6 +2239,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGM
       objectReference: {fileID: 0}
+    - target: {fileID: 1603212330022652143, guid: ce6bef2b0da3f834b95451717dc66cb6,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca73facecd0e08344acdcecde8ea570b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce6bef2b0da3f834b95451717dc66cb6, type: 3}
 --- !u!1001 &826868444
@@ -2818,6 +2823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIM: {fileID: 1159093933}
+  animeTime: 0
   debugMode: 0
   R: 0
   G: 0
@@ -2953,7 +2959,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.04061066, b: 0, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -4463,7 +4469,7 @@ PrefabInstance:
     - target: {fileID: 4183569952737488671, guid: 72619fa1a02899f46afd6e6efd77e566,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.7201185
+      value: -4.75
       objectReference: {fileID: 0}
     - target: {fileID: 4183569952737488671, guid: 72619fa1a02899f46afd6e6efd77e566,
         type: 3}
