@@ -50,6 +50,7 @@ public class gMScript : MonoBehaviour
         if (gameResult == -1)//クリア
         {
             Debug.Log("シーン読み込み");
+            backR = backG = backB = false;
             UIM.LoadOver("StageClear");
         }
         if (gameResult==1)//ミス
