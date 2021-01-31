@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class moverScript : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class moverScript : MonoBehaviour
     {
         var h = Input.GetAxis("Horizontal");//縦向きの動きを
         var v = Input.GetAxis("Vertical");
+        if (Input.GetKey(KeyCode.W)) v =  1;
+        if (Input.GetKey(KeyCode.S)) v = -1;
+        if (Input.GetKey(KeyCode.A)) h = -1;
+        if (Input.GetKey(KeyCode.D)) h =  1;
+        if (Input.GetKey(KeyCode.R)) SceneManager.LoadScene("Stage" + gMScript.nowStageNum);
+        if (Input.GetKey(KeyCode.T)) SceneManager.LoadScene("TitleScene");
         //Debug.Log(h);
         animator.SetBool("destroy", false);
         animator.SetBool("walk", false);
