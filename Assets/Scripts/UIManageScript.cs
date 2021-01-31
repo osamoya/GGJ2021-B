@@ -37,4 +37,19 @@ public class UIManageScript : MonoBehaviour
         }
         else Debug.Log("すでに重なってます！");//デバッグ用
     }
+    public void NextStage()
+    {
+        Debug.Log("ステージクリア後、呼ばれる");
+        if (gMScript.nowStageNum <= 5)
+        {
+            gMScript.nowStageNum++;
+            string sname = "Stage"+gMScript.nowStageNum;
+            LoadName(sname);
+        }
+        else
+        {
+            Debug.Log("タイトルへ");
+            LoadName("TitleScene");
+        }
+    }
 }
