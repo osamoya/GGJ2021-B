@@ -198,6 +198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: robot
       objectReference: {fileID: 0}
+    - target: {fileID: 7953885990376391452, guid: 7eb16fe33ff24b744934218a3e443e19,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7953885990406135377, guid: 7eb16fe33ff24b744934218a3e443e19,
         type: 3}
       propertyPath: m_Mesh
