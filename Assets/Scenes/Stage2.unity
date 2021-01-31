@@ -2749,7 +2749,7 @@ PrefabInstance:
     - target: {fileID: 7953885990376391452, guid: 7eb16fe33ff24b744934218a3e443e19,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7953885990406135377, guid: 7eb16fe33ff24b744934218a3e443e19,
         type: 3}
@@ -2978,10 +2978,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIM: {fileID: 1159093933}
+  animeTime: 0
   debugMode: 0
   R: 0
   G: 0
   B: 0
+  stage: 0
 --- !u!114 &1159093932
 MonoBehaviour:
   m_ObjectHideFlags: 0
