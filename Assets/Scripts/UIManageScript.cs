@@ -54,6 +54,11 @@ public class UIManageScript : MonoBehaviour
         }
     }
 
+    public void SelectMap()
+    {
+        LoadName("mapChoose");
+    }
+
     private void Reset()
     {
         gMScript.gameResult = 0;
