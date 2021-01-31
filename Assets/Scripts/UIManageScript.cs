@@ -20,7 +20,7 @@ public class UIManageScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void LoadName(string name) { SceneManager.LoadScene(name); }//以上
 
@@ -29,7 +29,8 @@ public class UIManageScript : MonoBehaviour
     /// すでにあったら拒否ります
     /// </summary>
     /// <param name="name"></param>
-    public void LoadOver(string name) {
+    public void LoadOver(string name)
+    {
         if (!OverScene)
         {
             Debug.Log("重ねます");
@@ -44,7 +45,7 @@ public class UIManageScript : MonoBehaviour
         if (gMScript.nowStageNum <= 5)
         {
             gMScript.nowStageNum++;
-            string sname = "Stage"+gMScript.nowStageNum;
+            string sname = "Stage" + gMScript.nowStageNum;
             LoadName(sname);
         }
         else
@@ -58,7 +59,14 @@ public class UIManageScript : MonoBehaviour
     {
         LoadName("mapChoose");
     }
-
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_STANDALONE
+      UnityEngine.Application.Quit();
+#endif
+    }
     private void Reset()
     {
         gMScript.gameResult = 0;
