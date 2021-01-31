@@ -85,6 +85,10 @@ public class enemyScript : MonoBehaviour
                 if (!Red && !Blue && Green) gMScript.gameResult = 1;//敵キャラが緑の場合
             }*/
         }
+        if (!gMScript.backR && !gMScript.backG && !gMScript.backB)
+        {
+            gMScript.gameResult = 1; Debug.Log("死亡");
+        }
     }
 }
 
