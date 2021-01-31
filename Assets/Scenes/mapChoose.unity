@@ -843,6 +843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStageNum: 6
+  leftAr: {fileID: 86146770}
+  rightAr: {fileID: 2039389988}
 --- !u!1 &1241414682
 GameObject:
   m_ObjectHideFlags: 0
