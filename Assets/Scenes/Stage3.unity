@@ -145,7 +145,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39004990}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -2397,6 +2397,7 @@ GameObject:
   - component: {fileID: 1159093930}
   - component: {fileID: 1159093931}
   - component: {fileID: 1159093932}
+  - component: {fileID: 1159093933}
   m_Layer: 0
   m_Name: GameManageScripts
   m_TagString: Untagged
@@ -2430,6 +2431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4619d9e362914234e9a6705fad02d0dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIM: {fileID: 1159093933}
   debugMode: 0
   R: 0
   G: 0
@@ -2449,6 +2451,18 @@ MonoBehaviour:
   redLight: {fileID: 1206172049}
   greenLight: {fileID: 1924551105}
   blueLight: {fileID: 39004990}
+--- !u!114 &1159093933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159093929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad85731587134b242b1f421a1f2d39b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1206172049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,7 +3207,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924551105}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
