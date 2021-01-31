@@ -33,6 +33,8 @@ public class gMScript : MonoBehaviour
     private void Start()
     {
         animeTime = 0f;
+        backR = backG = backB = false;
+        gameResult = 0;
     }
 
     private void Update()
