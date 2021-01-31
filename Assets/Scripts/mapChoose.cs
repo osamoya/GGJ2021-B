@@ -33,4 +33,19 @@ public class mapChoose : MonoBehaviour
             gMScript.nowStageNum = chooseMap + 1;
         }
     }
+    public void left() {
+        if (chooseMap > 0)
+        {//左
+            allMapX += 768;
+            chooseMap--;
+        }
+    }
+    public void right()
+    {
+        if (chooseMap < maxStageNum - 1)
+        {//左
+            allMapX -= 768;
+            chooseMap++;
+        }
+    }
 }
