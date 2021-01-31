@@ -12,9 +12,10 @@ public class gMScript : MonoBehaviour
     public static bool plR;//自キャラの色です
     public static bool plG;
     public static bool plB;
-    
-    public static int gameResult;//ゲームの状況を取得する変数
-    public static int nowStageNum;//0…ステージ以外。1～…遊べるステージ
+
+    [SerializeField] public static int gameResult;//ゲームの状況を取得する変数
+
+    [SerializeField] public static int nowStageNum;//0…ステージ以外。1～…遊べるステージ
 
 
     //ここからくそコード
