@@ -21,75 +21,94 @@ public class enemyScript : MonoBehaviour
     void Update()
     {
 
-        
-       
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        bool deathFlag = true;
         if (gMScript.backR && !gMScript.backG && !gMScript.backB)//背景が赤
         {
-            /*if (gMScript.plR && !gMScript.plG && !gMScript.plB)//自キャラが赤
-            {
-                if (!Red && !Blue && Green) gMScript.gameResult = 1;//敵キャラが緑の場合
-                if (!Red && Blue && !Green) gMScript.gameResult = 1;//敵キャラが青の場合
-
-            }*/
-            /*if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
-            {*/
-            if (!Red && Blue && !Green) { gMScript.gameResult = 1; Debug.Log("死亡"); } //敵キャラが青の場合
-            //}
-            //if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
-            //{
-            if (!Red && !Blue && Green) { gMScript.gameResult = 1; Debug.Log("死亡"); }//敵キャラが緑の場合
-            //}
+            if (Red) { deathFlag = false; } //敵キャラが赤の場合
         }
         if (!gMScript.backR && gMScript.backG && !gMScript.backB)//背景が緑
         {
-            // if (gMScript.plR && !gMScript.plG && !gMScript.plB)//自キャラが赤
-            // {
-            if (!Red && Blue && !Green)
-            {
-                gMScript.gameResult = 1;
-                Debug.Log("死亡");
-            }//敵キャラが青の場合
-
-            //  }
-            /*if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
-            {
-                if (Red && !Blue && !Green) gMScript.gameResult = 1;//敵キャラが赤の場合
-                if (!Red && Blue && !Green) gMScript.gameResult = 1;//敵キャラが青の場合
-            }*/
-            // if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
-            // {
-            if (Red && !Blue && !Green)
-            {
-                gMScript.gameResult = 1;
-                Debug.Log("死亡");
-            }//敵キャラが赤の場合
-             // }
+            if (Green) { deathFlag = false; } //敵キャラが緑の場合
         }
         if (!gMScript.backR && !gMScript.backG && gMScript.backB)//背景が青
         {
-            //if (gMScript.plR && !gMScript.plG && !gMScript.plB)//自キャラが赤
-            //{
-            if (!Red && !Blue && Green) { gMScript.gameResult = 1; Debug.Log("死亡"); }//敵キャラが緑の場合
-                                                                                     //}
-                                                                                     //if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
-                                                                                     //{
-            if (Red && !Blue && !Green) { gMScript.gameResult = 1; Debug.Log("死亡"); }//敵キャラが赤の場合
-            //}
-            /*if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
-            {
-                if (Red && !Blue && !Green) gMScript.gameResult = 1;//敵キャラが赤の場合
-                if (!Red && !Blue && Green) gMScript.gameResult = 1;//敵キャラが緑の場合
-            }*/
+            if (Blue) { deathFlag = false; } //敵キャラが青の場合
         }
-        if (!gMScript.backR && !gMScript.backG && !gMScript.backB)
+        if (deathFlag)
         {
             gMScript.gameResult = 1; Debug.Log("死亡");
         }
+        deathFlag = true;
     }
+ //       private void OnTriggerEnter2D(Collider2D collision)
+ //   {
+ //       if (gMScript.backR && !gMScript.backG && !gMScript.backB)//背景が赤
+ //       {
+ //           /*if (gMScript.plR && !gMScript.plG && !gMScript.plB)//自キャラが赤
+ //           {
+ //               if (!Red && !Blue && Green) gMScript.gameResult = 1;//敵キャラが緑の場合
+ //               if (!Red && Blue && !Green) gMScript.gameResult = 1;//敵キャラが青の場合
+ //
+ //           }*/
+ //           /*if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
+ //           {*/
+ //           if (!Red && Blue && !Green) { gMScript.gameResult = 1; Debug.Log("死亡"); } //敵キャラが青の場合
+//            //}
+ //           //if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
+ //           //{
+//            if (!Red && !Blue && Green) { gMScript.gameResult = 1; Debug.Log("死亡"); }//敵キャラが緑の場合
+ //           //}
+ //       }
+ //       if (!gMScript.backR && gMScript.backG && !gMScript.backB)//背景が緑
+  //      {
+ //           // if (gMScript.plR && !gMScript.plG && !gMScript.plB)//自キャラが赤
+ //           // {
+ //           if (!Red && Blue && !Green)
+//           {
+ //               gMScript.gameResult = 1;
+//                Debug.Log("死亡");
+ //
+ //           //  }
+ //           /*if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
+ //           {
+  //              if (Red && !Blue && !Green) gMScript.gameResult = 1;//敵キャラが赤の場合
+ //               if (!Red && Blue && !Green) gMScript.gameResult = 1;//敵キャラが青の場合
+ //           }*/
+  //          // if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
+ //           // {
+ //           if (Red && !Blue && !Green)
+  //          {
+  //              gMScript.gameResult = 1;
+ //               Debug.Log("死亡");
+ //           }//敵キャラが赤の場合
+ //            // }
+ //       }
+ //       if (!gMScript.backR && !gMScript.backG && gMScript.backB)//背景が青
+ //       {
+ //           //if (gMScript.plR && !gMScript.plG && !gMScript.plB)//自キャラが赤
+ //           //{
+ //           if (!Red && !Blue && Green) { gMScript.gameResult = 1; Debug.Log("死亡"); }//敵キャラが緑の場合
+  //                                                                                   //}
+ //                                                                                    //if (!gMScript.plR && gMScript.plG && !gMScript.plB)//自キャラが緑
+//                                                                                     //{
+ //           if (Red && !Blue && !Green) { gMScript.gameResult = 1; Debug.Log("死亡"); }//敵キャラが赤の場合
+ //           //}
+ //           /*if (!gMScript.plR && !gMScript.plG && gMScript.plB)//自キャラが青
+ //           {
+ //               if (Red && !Blue && !Green) gMScript.gameResult = 1;//敵キャラが赤の場合
+ //               if (!Red && !Blue && Green) gMScript.gameResult = 1;//敵キャラが緑の場合
+ //           }*/
+ //       }
+ //       if (!gMScript.backR && !gMScript.backG && !gMScript.backB)
+//       {
+//            gMScript.gameResult = 1; Debug.Log("死亡");
+//        }
+//    }
 }
 
 
