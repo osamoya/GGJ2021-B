@@ -262,7 +262,7 @@ PrefabInstance:
     - target: {fileID: 3628828511446205881, guid: 13cadd59b7ec73f4f9864d870007b5e2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.157875
+      value: 9.4
       objectReference: {fileID: 0}
     - target: {fileID: 3628828511446205881, guid: 13cadd59b7ec73f4f9864d870007b5e2,
         type: 3}
@@ -634,6 +634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posGO: {fileID: 679957099}
   maxTime: 500
+  flip: 0
 --- !u!4 &377276285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400876294928630855, guid: 75b5d4e365d37b649b6a1e74039194c0,
@@ -2584,12 +2585,12 @@ PrefabInstance:
     - target: {fileID: 3105180872181190967, guid: 986daef04943edf4c96089a77abe9315,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.620119
+      value: -12.42
       objectReference: {fileID: 0}
     - target: {fileID: 3105180872181190967, guid: 986daef04943edf4c96089a77abe9315,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.757875
+      value: 6.86
       objectReference: {fileID: 0}
     - target: {fileID: 3105180872181190967, guid: 986daef04943edf4c96089a77abe9315,
         type: 3}
@@ -3663,6 +3664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posGO: {fileID: 1680980805}
   maxTime: 300
+  flip: 0
 --- !u!212 &1613189853
 SpriteRenderer:
   m_ObjectHideFlags: 0
