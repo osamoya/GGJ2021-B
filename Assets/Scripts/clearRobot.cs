@@ -12,7 +12,7 @@ public class clearRobot : MonoBehaviour
         for (int i = 0; i < robot.Length; i++) {
             robot[i].SetActive(false);
         }
-        random = Random.Range(0, robot.Length+1);
+        random = Random.Range(0, robot.Length);
     }
 
     // Update is called once per frame
