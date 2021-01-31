@@ -50,6 +50,7 @@ public class gMScript : MonoBehaviour
         if (gameResult == -1)//クリア
         {
             Debug.Log("シーン読み込み");
+            backR = backG = backB = false;
             UIM.LoadOver("StageClear");
         }
         if (gameResult==1)//ミス
@@ -58,13 +59,17 @@ public class gMScript : MonoBehaviour
             if (animeTime>=2.0f)
             {
                 Debug.Log("ミスの判定");
-                gameResult = 0;
+                ResetStage();
                 UIM.LoadName("stage" + nowStageNum);
             }
             
         }
     }
 
-    
+    public static void ResetStage()
+    {
+        backR= backG= backB=false;
+        gameResult = 0;
+}
 
 }
