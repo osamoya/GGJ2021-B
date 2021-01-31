@@ -30,7 +30,11 @@ public class UIManageScript : MonoBehaviour
     /// </summary>
     /// <param name="name"></param>
     public void LoadOver(string name) {
-        if (!OverScene) SceneManager.LoadScene(name, LoadSceneMode.Additive);//なければつける
+        if (!OverScene)
+        {
+            Debug.Log("重ねます");
+            OverScene = true; SceneManager.LoadScene(name, LoadSceneMode.Additive);//なければつける
+        }
         else Debug.Log("すでに重なってます！");//デバッグ用
     }
 }
