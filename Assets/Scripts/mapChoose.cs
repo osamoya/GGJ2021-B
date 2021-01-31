@@ -19,11 +19,11 @@ public class mapChoose : MonoBehaviour
     void Update()
     {
         this.transform.position = new Vector2(allMapX+960, 560);
-        if (Input.GetKeyDown(KeyCode.RightArrow)&& chooseMap<maxStageNum-1) {//右
+        if ((Input.GetKeyDown(KeyCode.D)||Input.GetKeyDown(KeyCode.RightArrow))&& chooseMap<maxStageNum-1) {//右
             allMapX -= 768;
             chooseMap++;
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow)&&chooseMap>0) {//左
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))&&chooseMap>0) {//左
             allMapX += 768;
             chooseMap--;
         }
