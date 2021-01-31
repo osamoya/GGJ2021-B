@@ -14,7 +14,7 @@ public class mapChoose : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gMScript.gameResult = 0;
     }
 
     // Update is called once per frame
